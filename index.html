@@ -2,661 +2,806 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="YOYO GAMES - ألعاب مجانية بدون تحميل">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="YOYO GAMES - ألعاب مجانية بدون تحميل واختبارات ممتعة">
 <title>YOYO GAMES 🎮</title>
 
 <style>
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
 body{
-margin:0;
-background:#08080e;
-color:#fff;
-font-family:Arial,Tahoma,sans-serif;
-padding-bottom:75px
-}
-button,input{font:inherit}
-button{cursor:pointer}
-
-.wrap{
-width:min(1180px,calc(100% - 20px));
-margin:auto
+  background:#09080f;
+  color:#fff;
+  font-family:Arial,Tahoma,sans-serif;
+  padding-bottom:85px;
 }
 
-/* HEADER */
+button{
+  font-family:inherit;
+  cursor:pointer;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.container{
+  width:min(1150px,94%);
+  margin:auto;
+}
+
+/* ===== HEADER ===== */
+
 header{
-height:70px;
-position:sticky;
-top:0;
-z-index:50;
-background:#09090eef;
-backdrop-filter:blur(15px);
-border-bottom:1px solid #272733
+  height:75px;
+  background:#09090f;
+  border-bottom:1px solid #25232f;
+  position:sticky;
+  top:0;
+  z-index:100;
+  backdrop-filter:blur(15px);
 }
-.head{
-height:100%;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:15px
+
+.header{
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
+
 .logo{
-font-size:24px;
-font-weight:900;
-display:flex;
-align-items:center;
-gap:9px
-}
-.logo span{
-background:linear-gradient(135deg,#7c3aed,#d946ef);
-padding:8px 10px;
-border-radius:13px
-}
-.logo b{
-background:linear-gradient(90deg,#fff,#c4b5fd);
--webkit-background-clip:text;
-color:transparent
-}
-nav{display:flex;gap:25px}
-nav a{
-color:#aaa;
-text-decoration:none;
-font-weight:bold
-}
-nav a:hover{color:#fff}
-
-.actions{display:flex;gap:8px}
-.icon,.login{
-border-radius:12px;
-height:42px
-}
-.icon{
-width:42px;
-background:#12121a;
-border:1px solid #30303b;
-color:#fff
-}
-.login{
-padding:0 17px;
-border:0;
-color:#fff;
-font-weight:bold;
-background:linear-gradient(135deg,#7c3aed,#c026d3)
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:25px;
+  font-weight:900;
 }
 
-/* HERO */
-.hero{padding:32px 0 20px}
-.heroBox{
-min-height:360px;
-border-radius:28px;
-border:1px solid #43285c;
-padding:45px;
-overflow:hidden;
-position:relative;
-background:
-radial-gradient(circle at 80% 25%,#a855f744,transparent 28%),
-linear-gradient(135deg,#301252,#170d27 55%,#0c0b13)
+.logo-icon{
+  width:45px;
+  height:45px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#7138e8,#c52be5);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
 }
-.heroContent{
-position:relative;
-z-index:2;
-max-width:650px
+
+.logo-text{
+  background:linear-gradient(90deg,#fff,#c4b5fd);
+  -webkit-background-clip:text;
+  color:transparent;
 }
+
+nav{
+  display:flex;
+  gap:30px;
+  color:#9996a5;
+  font-weight:bold;
+}
+
+nav a:hover{
+  color:#fff;
+}
+
+.header-buttons{
+  display:flex;
+  gap:8px;
+}
+
+.search-button{
+  width:45px;
+  height:45px;
+  border-radius:14px;
+  border:1px solid #34313f;
+  background:#121119;
+  color:#fff;
+  font-size:22px;
+}
+
+.header-play{
+  padding:0 18px;
+  height:45px;
+  border:0;
+  border-radius:14px;
+  color:#fff;
+  font-weight:bold;
+  background:linear-gradient(135deg,#7138e8,#c52be5);
+}
+
+/* ===== HERO ===== */
+
+.hero{
+  padding:30px 0;
+}
+
+.hero-box{
+  min-height:390px;
+  border-radius:30px;
+  border:1px solid #4a2764;
+  padding:50px;
+  overflow:hidden;
+  position:relative;
+  background:
+    radial-gradient(circle at 75% 25%,#a855f755,transparent 28%),
+    linear-gradient(135deg,#321552,#170e27 55%,#0c0b13);
+}
+
+.hero-box:after{
+  content:"🎮";
+  position:absolute;
+  left:5%;
+  bottom:-45px;
+  font-size:190px;
+  opacity:.08;
+  transform:rotate(-10deg);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:720px;
+}
+
 .badge{
-display:inline-block;
-padding:9px 15px;
-border:1px solid #9b6bea;
-border-radius:30px;
-background:#7c3aed22;
-color:#d9ccff;
-font-weight:bold;
-font-size:13px
+  display:inline-block;
+  border:1px solid #8b55d2;
+  background:#7c3aed25;
+  border-radius:30px;
+  padding:11px 18px;
+  color:#ddd0ff;
+  font-size:14px;
+  font-weight:bold;
 }
+
 .hero h1{
-font-size:clamp(40px,7vw,68px);
-line-height:1.05;
-margin:20px 0;
-letter-spacing:-3px
+  font-size:clamp(45px,7vw,75px);
+  line-height:1;
+  margin:25px 0 18px;
 }
+
 .gradient{
-background:linear-gradient(90deg,#a78bfa,#e879f9);
--webkit-background-clip:text;
-color:transparent
+  background:linear-gradient(90deg,#a78bfa,#e879f9);
+  -webkit-background-clip:text;
+  color:transparent;
 }
+
 .hero p{
-color:#bcb9c7;
-line-height:2;
-font-size:16px
-}
-.heroBtns{
-display:flex;
-gap:10px;
-margin-top:25px
-}
-.primary,.secondary{
-padding:14px 22px;
-border-radius:13px;
-font-weight:bold
-}
-.primary{
-background:linear-gradient(135deg,#7c3aed,#c026d3);
-color:#fff;
-border:0
-}
-.secondary{
-background:#15151d;
-color:#fff;
-border:1px solid #393943
+  color:#b9b5c4;
+  line-height:2;
+  font-size:16px;
 }
 
-/* SEARCH */
+.hero-buttons{
+  display:flex;
+  gap:12px;
+  margin-top:27px;
+}
+
+.primary-button,
+.secondary-button{
+  padding:14px 23px;
+  border-radius:14px;
+  font-weight:bold;
+  font-size:14px;
+}
+
+.primary-button{
+  border:0;
+  color:#fff;
+  background:linear-gradient(135deg,#7138e8,#c52be5);
+}
+
+.secondary-button{
+  color:#fff;
+  background:#15141d;
+  border:1px solid #3b3945;
+}
+
+/* ===== SEARCH ===== */
+
 .search{
-margin:15px 0;
-position:relative
+  position:relative;
+  margin:5px 0 16px;
 }
+
 .search input{
-width:100%;
-height:56px;
-border-radius:17px;
-border:1px solid #2d2d38;
-background:#111118;
-color:#fff;
-padding:0 50px 0 15px;
-outline:none
-}
-.search span{
-position:absolute;
-right:18px;
-top:16px;
-font-size:20px
+  width:100%;
+  height:58px;
+  border-radius:18px;
+  background:#111018;
+  border:1px solid #302e39;
+  color:#fff;
+  padding:0 55px 0 20px;
+  outline:none;
+  font-size:15px;
 }
 
-/* CATEGORIES */
+.search input:focus{
+  border-color:#8548d8;
+}
+
+.search-icon{
+  position:absolute;
+  right:19px;
+  top:16px;
+  font-size:21px;
+}
+
+/* ===== CATEGORIES ===== */
+
 .categories{
-display:flex;
-gap:9px;
-overflow:auto;
-padding-bottom:4px
+  display:flex;
+  gap:9px;
+  overflow-x:auto;
+  padding-bottom:5px;
 }
+
 .categories button{
-white-space:nowrap;
-padding:11px 17px;
-border-radius:13px;
-background:#111118;
-border:1px solid #2c2c36;
-color:#aaa;
-font-weight:bold
+  white-space:nowrap;
+  padding:12px 18px;
+  border-radius:14px;
+  border:1px solid #302e39;
+  background:#111018;
+  color:#aaa7b4;
+  font-weight:bold;
 }
+
 .categories button.active{
-background:linear-gradient(135deg,#7c3aed,#a855f7);
-color:#fff;
-border:0
+  color:#fff;
+  border-color:transparent;
+  background:linear-gradient(135deg,#7138e8,#a83be8);
 }
 
-/* SECTIONS */
-.section{margin-top:42px}
-.sectionHead{
-display:flex;
-align-items:end;
-justify-content:space-between;
-margin-bottom:17px
+/* ===== SECTIONS ===== */
+
+.section{
+  margin-top:45px;
 }
+
+.section-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  margin-bottom:18px;
+}
+
 .title{
-font-size:27px;
-font-weight:900
+  font-size:30px;
+  font-weight:900;
 }
-.title small{
-display:block;
-font-size:12px;
-color:#777;
-margin-top:6px
+
+.subtitle{
+  display:block;
+  margin-top:6px;
+  color:#777480;
+  font-size:12px;
 }
+
 .more{
-border:0;
-background:none;
-color:#a78bfa;
-font-weight:bold
+  color:#a78bfa;
+  background:none;
+  border:0;
+  font-weight:bold;
 }
 
-/* FEATURED */
+/* ===== FEATURED ===== */
+
 .featured{
-display:grid;
-grid-template-columns:1.6fr 1fr;
-gap:14px
+  display:grid;
+  grid-template-columns:1.6fr 1fr;
+  gap:14px;
 }
+
 .feature{
-height:250px;
-position:relative;
-overflow:hidden;
-border-radius:22px;
-border:1px solid #2c2c38;
-cursor:pointer;
-background:#13131c
+  height:260px;
+  border:1px solid #302e3a;
+  border-radius:23px;
+  overflow:hidden;
+  position:relative;
+  cursor:pointer;
+  background:#12111a;
 }
-.featureArt{
-position:absolute;
-inset:0;
-display:grid;
-place-items:center;
-font-size:95px;
-background:
-radial-gradient(circle at 70% 30%,#a855f755,transparent 30%),
-linear-gradient(135deg,#15152c,#321552)
+
+.feature-art{
+  position:absolute;
+  inset:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:100px;
+  background:
+    radial-gradient(circle at 70% 25%,#8b5cf655,transparent 30%),
+    linear-gradient(135deg,#14142b,#3b165b);
 }
-.feature:nth-child(2) .featureArt{
-background:
-radial-gradient(circle at 70% 30%,#22c55e44,transparent 30%),
-linear-gradient(135deg,#102019,#19351f)
+
+.feature:nth-child(2) .feature-art{
+  background:
+    radial-gradient(circle at 70% 25%,#22c55e55,transparent 30%),
+    linear-gradient(135deg,#0b2115,#173b23);
 }
-.featureInfo{
-position:absolute;
-bottom:0;
-right:0;
-left:0;
-padding:55px 20px 18px;
-background:linear-gradient(transparent,#050509)
+
+.feature-info{
+  position:absolute;
+  bottom:0;
+  right:0;
+  left:0;
+  padding:65px 20px 18px;
+  background:linear-gradient(transparent,#050509);
 }
-.featureInfo h3{margin:0 0 6px;font-size:22px}
-.featureInfo p{margin:0;color:#aaa;font-size:12px}
+
+.feature-info h3{
+  font-size:23px;
+  margin-bottom:7px;
+}
+
+.feature-info p{
+  color:#aaa;
+  font-size:12px;
+}
+
 .play{
-position:absolute;
-left:18px;
-bottom:18px;
-width:46px;
-height:46px;
-border:0;
-border-radius:50%;
-background:linear-gradient(135deg,#7c3aed,#c026d3);
-color:#fff
+  position:absolute;
+  left:17px;
+  bottom:17px;
+  width:50px;
+  height:50px;
+  border:0;
+  border-radius:50%;
+  color:#fff;
+  background:linear-gradient(135deg,#7138e8,#c52be5);
+  font-size:18px;
 }
 
-/* ADSENSE SPACE */
+/* ===== ADS ===== */
+
 .ad{
-height:90px;
-border:1px dashed #33333d;
-border-radius:16px;
-display:grid;
-place-items:center;
-color:#555562;
-font-size:11px;
-margin-top:30px
+  height:90px;
+  margin:30px 0;
+  border:1px dashed #34323c;
+  border-radius:17px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#55525f;
+  font-size:11px;
 }
 
-/* BUILD */
-.buildBox{
-padding:28px;
-min-height:190px;
-border-radius:22px;
-border:1px solid #315033;
-display:flex;
-align-items:center;
-justify-content:space-between;
-overflow:hidden;
-background:
-radial-gradient(circle at 80% 20%,#22c55e33,transparent 30%),
-linear-gradient(135deg,#071009,#142319)
-}
-.buildBox h2{margin:0 0 10px}
-.buildBox p{
-color:#aeb8b0;
-max-width:580px;
-line-height:1.8;
-font-size:13px
-}
-.blocks{
-font-size:60px;
-line-height:1.2
+/* ===== GAMES ===== */
+
+.games-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:13px;
 }
 
-/* GAMES */
-.gamesGrid{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:13px
-}
 .game{
-background:#111118;
-border:1px solid #292934;
-border-radius:18px;
-overflow:hidden;
-cursor:pointer;
-transition:.2s
+  background:#111018;
+  border:1px solid #292732;
+  border-radius:18px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:.2s;
 }
+
 .game:hover{
-transform:translateY(-5px);
-border-color:#67449b
-}
-.gameImg{
-height:145px;
-display:grid;
-place-items:center;
-font-size:58px
-}
-.g1{background:linear-gradient(135deg,#172554,#4c1d95)}
-.g2{background:linear-gradient(135deg,#3f0d12,#991b1b)}
-.g3{background:linear-gradient(135deg,#052e16,#166534)}
-.g4{background:linear-gradient(135deg,#3b0764,#a21caf)}
-.g5{background:linear-gradient(135deg,#082f49,#0369a1)}
-.g6{background:linear-gradient(135deg,#365314,#4d7c0f)}
-.g7{background:linear-gradient(135deg,#431407,#c2410c)}
-.g8{background:linear-gradient(135deg,#172554,#1d4ed8)}
-.g9{background:linear-gradient(135deg,#052e16,#15803d)}
-.g10{background:linear-gradient(135deg,#1e1b4b,#6d28d9)}
-.g11{background:linear-gradient(135deg,#312e81,#4f46e5)}
-.g12{background:linear-gradient(135deg,#292524,#57534e)}
-.g13{background:linear-gradient(135deg,#3f3f46,#71717a)}
-.g14{background:linear-gradient(135deg,#083344,#0e7490)}
-.g15{background:linear-gradient(135deg,#451a03,#d97706)}
-.g16{background:linear-gradient(135deg,#172554,#0f766e)}
-.g17{background:linear-gradient(135deg,#3b0764,#be185d)}
-.g18{background:linear-gradient(135deg,#111827,#334155)}
-.gameName{
-padding:11px 12px 4px;
-font-weight:bold;
-font-size:14px
-}
-.gameMeta{
-display:flex;
-justify-content:space-between;
-padding:5px 12px 12px;
-color:#858591;
-font-size:10px
+  transform:translateY(-5px);
+  border-color:#8046c8;
 }
 
-/* TESTS */
+.game-art{
+  height:145px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:65px;
+}
+
+.bg1{background:linear-gradient(135deg,#172554,#4c1d95)}
+.bg2{background:linear-gradient(135deg,#3f0d12,#991b1b)}
+.bg3{background:linear-gradient(135deg,#052e16,#166534)}
+.bg4{background:linear-gradient(135deg,#3b0764,#a21caf)}
+.bg5{background:linear-gradient(135deg,#082f49,#0369a1)}
+.bg6{background:linear-gradient(135deg,#365314,#4d7c0f)}
+.bg7{background:linear-gradient(135deg,#431407,#c2410c)}
+.bg8{background:linear-gradient(135deg,#172554,#1d4ed8)}
+.bg9{background:linear-gradient(135deg,#052e16,#15803d)}
+.bg10{background:linear-gradient(135deg,#1e1b4b,#6d28d9)}
+
+.game-name{
+  padding:12px 12px 5px;
+  font-size:14px;
+  font-weight:bold;
+}
+
+.game-info{
+  padding:5px 12px 12px;
+  color:#777580;
+  font-size:10px;
+  display:flex;
+  justify-content:space-between;
+}
+
+/* ===== TESTS ===== */
+
 .tests{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:14px
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
 }
+
 .test{
-padding:23px;
-border-radius:20px;
-border:1px solid #2d2d38;
-background:linear-gradient(145deg,#15151e,#0e0e13)
+  padding:24px;
+  border-radius:20px;
+  border:1px solid #2d2b36;
+  background:linear-gradient(145deg,#17151f,#0e0d13);
 }
-.testIcon{
-width:52px;
-height:52px;
-border-radius:15px;
-display:grid;
-place-items:center;
-font-size:25px;
-background:#24173c;
-margin-bottom:15px
+
+.test-icon{
+  width:55px;
+  height:55px;
+  border-radius:16px;
+  background:#28183e;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+  margin-bottom:15px;
 }
-.test h3{margin:0 0 8px}
+
+.test h3{
+  margin-bottom:8px;
+}
+
 .test p{
-color:#888895;
-font-size:12px;
-line-height:1.8;
-min-height:40px
+  color:#888591;
+  font-size:12px;
+  line-height:1.8;
+  min-height:43px;
 }
+
 .test button{
-width:100%;
-padding:12px;
-margin-top:14px;
-border-radius:12px;
-background:#1a1723;
-color:#fff;
-border:1px solid #3a2850;
-font-weight:bold
+  width:100%;
+  margin-top:14px;
+  padding:13px;
+  border-radius:12px;
+  background:#191720;
+  border:1px solid #412d58;
+  color:#fff;
+  font-weight:bold;
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
+
 footer{
-margin-top:55px;
-padding:30px;
-border-top:1px solid #20202a;
-text-align:center;
-color:#70707d;
-font-size:12px
+  text-align:center;
+  color:#686570;
+  font-size:12px;
+  border-top:1px solid #24222c;
+  margin-top:50px;
+  padding:30px;
 }
 
-/* MOBILE BAR */
-.mobileBar{
-display:none;
-position:fixed;
-bottom:0;
-right:0;
-left:0;
-height:68px;
-z-index:80;
-background:#0b0b10f5;
-backdrop-filter:blur(15px);
-border-top:1px solid #292934
-}
-.mobileBar button{
-flex:1;
-background:none;
-border:0;
-color:#777;
-font-size:10px;
-font-weight:bold
-}
-.mobileBar span{
-display:block;
-font-size:20px;
-margin-bottom:3px
-}
-.mobileBar .active{color:#a78bfa}
+/* ===== MOBILE NAV ===== */
 
-/* MODAL */
+.mobile-nav{
+  display:none;
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  height:74px;
+  z-index:90;
+  background:#0b0a10f5;
+  border-top:1px solid #292732;
+  backdrop-filter:blur(15px);
+}
+
+.mobile-nav button{
+  flex:1;
+  background:none;
+  border:0;
+  color:#777480;
+  font-size:10px;
+  font-weight:bold;
+}
+
+.mobile-nav span{
+  display:block;
+  font-size:21px;
+  margin-bottom:4px;
+}
+
+.mobile-nav .selected{
+  color:#a78bfa;
+}
+
+/* ===== MODAL ===== */
+
 .modal{
-display:none;
-position:fixed;
-z-index:100;
-inset:0;
-background:#000d;
-backdrop-filter:blur(8px);
-place-items:center;
-padding:15px
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:200;
+  background:#000d;
+  backdrop-filter:blur(8px);
+  align-items:center;
+  justify-content:center;
+  padding:12px;
 }
-.modal.show{display:grid}
-.modalBox{
-width:min(720px,100%);
-max-height:92vh;
-overflow:auto;
-background:#101016;
-border:1px solid #343440;
-border-radius:23px;
-padding:20px
+
+.modal.show{
+  display:flex;
 }
-.modalHead{
-display:flex;
-justify-content:space-between;
-align-items:center
+
+.modal-box{
+  width:min(950px,100%);
+  height:min(88vh,750px);
+  background:#101017;
+  border:1px solid #393640;
+  border-radius:23px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
 }
+
+.modal-header{
+  height:62px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 16px;
+  border-bottom:1px solid #292732;
+}
+
 .close{
-width:38px;
-height:38px;
-border-radius:10px;
-background:#191920;
-border:1px solid #33333d;
-color:#fff;
-font-size:20px
-}
-.gameScreen{
-min-height:330px;
-margin-top:15px;
-border-radius:18px;
-background:#0b0b10;
-border:1px solid #24242e;
-display:grid;
-place-items:center;
-text-align:center;
-padding:20px
+  width:40px;
+  height:40px;
+  border-radius:11px;
+  background:#181720;
+  border:1px solid #36333f;
+  color:#fff;
+  font-size:22px;
 }
 
-/* XO */
-.board{
-display:grid;
-grid-template-columns:repeat(3,80px);
-gap:7px;
-direction:ltr
-}
-.cell{
-width:80px;
-height:80px;
-border-radius:12px;
-border:1px solid #393943;
-background:#17171f;
-color:#fff;
-font-size:30px
+.game-frame{
+  flex:1;
+  background:#fff;
 }
 
-/* MEMORY */
-.memory{
-display:grid;
-grid-template-columns:repeat(4,65px);
-gap:8px;
-direction:ltr
-}
-.mem{
-width:65px;
-height:65px;
-border-radius:10px;
-background:#17171f;
-border:1px solid #383843;
-font-size:22px
+.game-frame iframe{
+  width:100%;
+  height:100%;
+  border:0;
 }
 
-/* TARGET */
-.targetArea{
-width:min(560px,100%);
-height:300px;
-position:relative;
-background:#0d0d13;
-border:1px solid #292934;
-border-radius:15px
-}
-.target{
-display:none;
-position:absolute;
-width:48px;
-height:48px;
-border:0;
-border-radius:50%;
-background:#d946ef
+.game-link{
+  padding:12px;
+  text-align:center;
+  background:#121119;
+  border-top:1px solid #292732;
+  color:#aaa;
+  font-size:12px;
 }
 
-/* BUILD GAME */
-.world{
-display:grid;
-grid-template-columns:repeat(10,30px);
-gap:2px;
-direction:ltr
-}
-.block{
-width:30px;
-height:30px;
-background:#3b7a3b;
-border:1px solid #222
+.game-link a{
+  color:#b89bff;
+  text-decoration:underline;
 }
 
-/* QUIZ */
-.quizQuestion{
-font-size:20px;
-font-weight:bold;
-line-height:1.7;
-margin:20px 0
+/* ===== QUIZ ===== */
+
+.quiz{
+  flex:1;
+  overflow:auto;
+  padding:25px;
 }
-.answers{
-display:grid;
-gap:9px
-}
-.answer{
-padding:14px;
-background:#17171f;
-border:1px solid #30303b;
-border-radius:12px;
-color:#fff;
-text-align:right
-}
-.answer:hover{border-color:#9b6bea}
+
 .progress{
-height:5px;
-background:#282832;
-border-radius:10px;
-overflow:hidden
+  width:100%;
+  height:6px;
+  background:#292732;
+  border-radius:20px;
+  overflow:hidden;
 }
-.progress div{
-height:100%;
-background:linear-gradient(90deg,#7c3aed,#d946ef)
+
+.progress-bar{
+  height:100%;
+  background:linear-gradient(90deg,#7138e8,#d946ef);
 }
-.score{
-font-size:55px;
-font-weight:bold;
-background:linear-gradient(90deg,#a78bfa,#e879f9);
--webkit-background-clip:text;
-color:transparent
+
+.question-number{
+  color:#777580;
+  margin-top:12px;
+  font-size:13px;
 }
+
+.question{
+  font-size:22px;
+  font-weight:bold;
+  line-height:1.7;
+  margin:25px 0 20px;
+}
+
+.answers{
+  display:grid;
+  gap:10px;
+}
+
+.answer{
+  width:100%;
+  padding:15px;
+  background:#17161f;
+  border:1px solid #34313d;
+  border-radius:13px;
+  color:#fff;
+  text-align:right;
+}
+
+.answer:hover{
+  border-color:#9756dc;
+  background:#1d1926;
+}
+
+.result{
+  text-align:center;
+  padding:60px 20px;
+}
+
+.result-icon{
+  font-size:60px;
+}
+
+.result-score{
+  font-size:65px;
+  font-weight:900;
+  margin:15px;
+  background:linear-gradient(90deg,#a78bfa,#e879f9);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+/* ===== RESPONSIVE ===== */
 
 @media(max-width:1050px){
-.gamesGrid{grid-template-columns:repeat(4,1fr)}
+  .games-grid{
+    grid-template-columns:repeat(4,1fr);
+  }
 }
 
 @media(max-width:800px){
-nav{display:none}
-.login{display:none}
-.heroBox{padding:30px 22px}
-.featured{grid-template-columns:1fr}
-.gamesGrid{grid-template-columns:repeat(2,1fr);gap:10px}
-.tests{grid-template-columns:1fr}
-.mobileBar{display:flex}
-.buildBox{min-height:210px}
-.blocks{font-size:40px}
-.gameImg{height:125px}
+
+  header{
+    height:68px;
+  }
+
+  nav{
+    display:none;
+  }
+
+  .header-play{
+    display:none;
+  }
+
+  .hero-box{
+    padding:32px 22px;
+  }
+
+  .hero h1{
+    font-size:43px;
+  }
+
+  .featured{
+    grid-template-columns:1fr;
+  }
+
+  .games-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+  }
+
+  .tests{
+    grid-template-columns:1fr;
+  }
+
+  .mobile-nav{
+    display:flex;
+  }
+
+  .game-art{
+    height:120px;
+  }
 }
 
 @media(max-width:450px){
-.wrap{width:calc(100% - 14px)}
-.logo{font-size:20px}
-.hero h1{font-size:38px}
-.gameImg{height:115px;font-size:48px}
-.gameName{font-size:13px}
-.memory{grid-template-columns:repeat(4,58px)}
-.mem{width:58px;height:58px}
-.world{grid-template-columns:repeat(10,26px)}
-.block{width:26px;height:26px}
+
+  .container{
+    width:calc(100% - 14px);
+  }
+
+  .logo{
+    font-size:20px;
+  }
+
+  .logo-icon{
+    width:40px;
+    height:40px;
+  }
+
+  .hero h1{
+    font-size:39px;
+  }
+
+  .hero p{
+    font-size:14px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+  }
+
+  .game-art{
+    height:110px;
+    font-size:50px;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header>
-<div class="wrap head">
+<div class="container header">
 
 <div class="logo">
-<span>🎮</span>
-<b>YOYO GAMES</b>
+<div class="logo-icon">🎮</div>
+<div class="logo-text">YOYO GAMES</div>
 </div>
 
 <nav>
 <a href="#home">الرئيسية</a>
 <a href="#games">الألعاب</a>
-<a href="#build">البناء</a>
 <a href="#tests">الاختبارات</a>
 </nav>
 
-<div class="actions">
-<button class="icon" onclick="focusSearch()">⌕</button>
-<button class="login" onclick="scrollGames()">ابدأ اللعب</button>
+<div class="header-buttons">
+<button class="search-button" onclick="focusSearch()">⌕</button>
+<button class="header-play" onclick="scrollToSection('games')">
+ابدئي اللعب
+</button>
 </div>
 
 </div>
 </header>
 
+
 <main id="home">
-<div class="wrap">
+
+<div class="container">
+
+<!-- ================= HERO ================= -->
 
 <section class="hero">
-<div class="heroBox">
-<div class="heroContent">
 
-<span class="badge">● ألعاب مجانية بدون تحميل</span>
+<div class="hero-box">
+
+<div class="hero-content">
+
+<span class="badge">
+● ألعاب مجانية بدون تحميل
+</span>
 
 <h1>
 عالمك من<br>
@@ -664,969 +809,1252 @@ nav{display:none}
 </h1>
 
 <p>
-العب مباشرة من المتصفح: أكشن، سباقات، ألغاز،
-ألعاب بناء وعالم مفتوح، واختبارات ممتعة.
+العبي مباشرة من المتصفح 🎮
+ألغاز، أكشن، سباقات، ألعاب بناء،
+وألعاب شبيهة بعالم ماينكرافت،
+بالإضافة إلى اختبارات الشخصية والحب والذكاء.
 </p>
 
-<div class="heroBtns">
-<button class="primary" onclick="scrollGames()">🎮 استكشف الألعاب</button>
-<button class="secondary" onclick="openQuiz('personality')">🧠 اختبار شخصيتك</button>
+<div class="hero-buttons">
+
+<button class="primary-button"
+onclick="scrollToSection('games')">
+🎮 استكشفي الألعاب
+</button>
+
+<button class="secondary-button"
+onclick="startQuiz('personality')">
+🧠 اختبار شخصيتك
+</button>
+
 </div>
 
 </div>
 </div>
+
 </section>
 
+
+<!-- ================= SEARCH ================= -->
+
 <div class="search">
-<span>🔍</span>
-<input id="search" placeholder="ابحث عن لعبة..." oninput="searchGames()">
+
+<span class="search-icon">🔍</span>
+
+<input
+id="search"
+type="text"
+placeholder="ابحثي عن لعبة..."
+oninput="searchGames()">
+
 </div>
 
+
+<!-- ================= CATEGORIES ================= -->
+
 <div class="categories">
-<button class="active" onclick="filterGames('all',this)">الكل</button>
-<button onclick="filterGames('action',this)">⚔️ أكشن</button>
-<button onclick="filterGames('building',this)">🧱 بناء</button>
-<button onclick="filterGames('racing',this)">🏎️ سباقات</button>
-<button onclick="filterGames('puzzle',this)">🧩 ألغاز</button>
-<button onclick="filterGames('casual',this)">✨ خفيفة</button>
+
+<button class="active"
+onclick="filterGames('all',this)">
+الكل
+</button>
+
+<button onclick="filterGames('action',this)">
+⚔️ أكشن
+</button>
+
+<button onclick="filterGames('building',this)">
+🧱 بناء
+</button>
+
+<button onclick="filterGames('racing',this)">
+🏎️ سباقات
+</button>
+
+<button onclick="filterGames('puzzle',this)">
+🧩 ألغاز
+</button>
+
+<button onclick="filterGames('casual',this)">
+✨ خفيفة
+</button>
+
 </div>
+
+
+<!-- ================= FEATURED ================= -->
 
 <section class="section">
 
-<div class="sectionHead">
+<div class="section-title">
+
 <div class="title">
 🔥 ألعاب مميزة
-<small>مختارات YOYO اليوم</small>
+<span class="subtitle">
+مختارات YOYO اليوم
+</span>
 </div>
-<button class="more" onclick="scrollGames()">عرض الكل ←</button>
+
+<button class="more"
+onclick="scrollToSection('games')">
+عرض الكل ←
+</button>
+
 </div>
+
 
 <div class="featured">
 
-<div class="feature" onclick="openGame('جزيرة المكعبات')">
-<div class="featureArt">🏝️🧱</div>
-<div class="featureInfo">
-<h3>جزيرة المكعبات</h3>
-<p>ابنِ عالمك واستكشف الجزيرة</p>
-</div>
-<button class="play">▶</button>
-</div>
+<div class="feature"
+onclick="openGame(
+'Project Cube 🧱',
+'https://b-train04.github.io/Project-Cube/'
+)">
 
-<div class="feature" onclick="openGame('سباق السرعة')">
-<div class="featureArt">🏎️💨</div>
-<div class="featureInfo">
-<h3>سباق السرعة</h3>
-<p>اختبر سرعتك</p>
-</div>
-<button class="play">▶</button>
+<div class="feature-art">
+🏝️🧱
 </div>
 
-</div>
-</section>
+<div class="feature-info">
 
-<div class="ad">مساحة إعلان Google AdSense</div>
-
-<section class="section" id="build">
-
-<div class="sectionHead">
-<div class="title">
-🧱 عالم البناء
-<small>ألعاب بناء واستكشاف مستوحاة من العوالم المكعبة</small>
-</div>
-</div>
-
-<div class="buildBox">
-
-<div>
-<h2>ابنِ عالمك الخاص</h2>
+<h3>Project Cube</h3>
 
 <p>
-لعبة بناء مكعبات تعمل داخل الموقع.
-يمكنك تطويرها لاحقًا وربط ألعاب HTML5/WebGL
-مرخّصة.
+عالم مكعبات وبناء واستكشاف
+— تجربة شبيهة بفكرة Minecraft
 </p>
 
-<button class="primary" onclick="openGame('جزيرة المكعبات')">
-ابدأ البناء
-</button>
 </div>
 
-<div class="blocks">
-🟩 🟫 🟨<br>
-🟫 🟩 🟫
+<button class="play">▶</button>
+
+</div>
+
+
+<div class="feature"
+onclick="openGame(
+'Ragdoll Archers 🏹',
+'https://ragdoll-archers.github.io/index.html'
+)">
+
+<div class="feature-art">
+🏹🎯
+</div>
+
+<div class="feature-info">
+
+<h3>Ragdoll Archers</h3>
+
+<p>
+تصويب وفيزياء ممتعة
+</p>
+
+</div>
+
+<button class="play">▶</button>
+
 </div>
 
 </div>
+
 </section>
+
+
+<!-- ================= ADS ================= -->
+
+<div class="ad">
+مساحة إعلان Google AdSense
+</div>
+
+
+<!-- ================= GAMES ================= -->
 
 <section class="section" id="games">
 
-<div class="sectionHead">
+<div class="section-title">
+
 <div class="title">
+
 🎮 الألعاب
-<small>مجانية وتعمل مباشرة من المتصفح</small>
-</div>
+
+<span class="subtitle">
+ألعاب متصفح بدون تحميل
+</span>
+
 </div>
 
-<div class="gamesGrid">
+</div>
+
+
+<div class="games-grid">
+
 
 <!-- GAME 1 -->
-<div class="game" data-cat="building" data-name="جزيرة المكعبات" onclick="openGame('جزيرة المكعبات')">
-<div class="gameImg g1">🏝️</div>
-<div class="gameName">جزيرة المكعبات</div>
-<div class="gameMeta"><span>🧱 بناء</span><span>⭐4.9</span></div>
+
+<div class="game"
+data-category="puzzle"
+data-name="Tic Tac Toe"
+onclick="openGame(
+'Tic-Tac-Toe ❌⭕',
+'https://saiuttejr.github.io/GameBox/tic-tac-toe/'
+)">
+
+<div class="game-art bg1">❌⭕</div>
+
+<div class="game-name">
+Tic-Tac-Toe
 </div>
+
+<div class="game-info">
+<span>🧩 ألغاز</span>
+<span>مجاني</span>
+</div>
+
+</div>
+
 
 <!-- GAME 2 -->
-<div class="game" data-cat="action" data-name="Ragdoll Archers" onclick="openGame('Ragdoll Archers')">
-<div class="gameImg g2">🏹</div>
-<div class="gameName">Ragdoll Archers</div>
-<div class="gameMeta"><span>⚔️ أكشن</span><span>⭐4.7</span></div>
+
+<div class="game"
+data-category="casual"
+data-name="Snake"
+onclick="openGame(
+'Snake 🐍',
+'https://saiuttejr.github.io/GameBox/snake/'
+)">
+
+<div class="game-art bg2">🐍</div>
+
+<div class="game-name">Snake</div>
+
+<div class="game-info">
+<span>✨ خفيفة</span>
+<span>مجاني</span>
 </div>
+
+</div>
+
 
 <!-- GAME 3 -->
-<div class="game" data-cat="action" data-name="Evo Warriors" onclick="openGame('Evo Warriors')">
-<div class="gameImg g3">🛡️</div>
-<div class="gameName">Evo Warriors</div>
-<div class="gameMeta"><span>⚔️ أكشن</span><span>⭐4.6</span></div>
+
+<div class="game"
+data-category="puzzle"
+data-name="2048"
+onclick="openGame(
+'2048 🔢',
+'https://saiuttejr.github.io/GameBox/2048/'
+)">
+
+<div class="game-art bg3">🔢</div>
+
+<div class="game-name">2048</div>
+
+<div class="game-info">
+<span>🧩 ألغاز</span>
+<span>مجاني</span>
 </div>
+
+</div>
+
 
 <!-- GAME 4 -->
-<div class="game" data-cat="casual" data-name="Slice Master" onclick="openGame('Slice Master')">
-<div class="gameImg g4">🔪</div>
-<div class="gameName">Slice Master</div>
-<div class="gameMeta"><span>✨ خفيفة</span><span>⭐4.8</span></div>
+
+<div class="game"
+data-category="puzzle"
+data-name="Minesweeper"
+onclick="openGame(
+'Minesweeper 💣',
+'https://saiuttejr.github.io/GameBox/minesweeper/'
+)">
+
+<div class="game-art bg4">💣</div>
+
+<div class="game-name">Minesweeper</div>
+
+<div class="game-info">
+<span>🧩 ألغاز</span>
+<span>مجاني</span>
 </div>
+
+</div>
+
 
 <!-- GAME 5 -->
-<div class="game" data-cat="action" data-name="Pixel Blast" onclick="openGame('Pixel Blast')">
-<div class="gameImg g5">💥</div>
-<div class="gameName">Pixel Blast</div>
-<div class="gameMeta"><span>🎯 أكشن</span><span>⭐4.5</span></div>
+
+<div class="game"
+data-category="casual"
+data-name="Flappy Bird"
+onclick="openGame(
+'Flappy Bird 🐦',
+'https://saiuttejr.github.io/GameBox/flappy-bird/'
+)">
+
+<div class="game-art bg5">🐦</div>
+
+<div class="game-name">Flappy Bird</div>
+
+<div class="game-info">
+<span>✨ خفيفة</span>
+<span>مجاني</span>
 </div>
+
+</div>
+
 
 <!-- GAME 6 -->
-<div class="game" data-cat="casual" data-name="Crazy Chameleon" onclick="openGame('Crazy Chameleon')">
-<div class="gameImg g6">🦎</div>
-<div class="gameName">Crazy Chameleon</div>
-<div class="gameMeta"><span>✨ خفيفة</span><span>⭐4.4</span></div>
+
+<div class="game"
+data-category="puzzle"
+data-name="Tetris"
+onclick="openGame(
+'Tetris 🟦',
+'https://saiuttejr.github.io/GameBox/tetris/'
+)">
+
+<div class="game-art bg6">🟦</div>
+
+<div class="game-name">Tetris</div>
+
+<div class="game-info">
+<span>🧩 ألغاز</span>
+<span>مجاني</span>
 </div>
+
+</div>
+
 
 <!-- GAME 7 -->
-<div class="game" data-cat="casual" data-name="Bad Cat" onclick="openGame('Bad Cat')">
-<div class="gameImg g7">🐈</div>
-<div class="gameName">Bad Cat</div>
-<div class="gameMeta"><span>😂 ممتعة</span><span>⭐4.3</span></div>
+
+<div class="game"
+data-category="puzzle"
+data-name="Sudoku"
+onclick="openGame(
+'Sudoku 🔢',
+'https://saiuttejr.github.io/GameBox/sudoku/'
+)">
+
+<div class="game-art bg7">🔢</div>
+
+<div class="game-name">Sudoku</div>
+
+<div class="game-info">
+<span>🧩 ألغاز</span>
+<span>مجاني</span>
 </div>
+
+</div>
+
 
 <!-- GAME 8 -->
-<div class="game" data-cat="puzzle" data-name="XO" onclick="openGame('XO')">
-<div class="gameImg g8">❌⭕</div>
-<div class="gameName">XO كلاسيك</div>
-<div class="gameMeta"><span>🧩 ألغاز</span><span>⭐4.8</span></div>
+
+<div class="game"
+data-category="casual"
+data-name="Memory Match"
+onclick="openGame(
+'Memory Match 🧠',
+'https://saiuttejr.github.io/GameBox/memory-match/'
+)">
+
+<div class="game-art bg8">🧠</div>
+
+<div class="game-name">Memory Match</div>
+
+<div class="game-info">
+<span>✨ ذاكرة</span>
+<span>مجاني</span>
 </div>
+
+</div>
+
 
 <!-- GAME 9 -->
-<div class="game" data-cat="casual" data-name="Snake Rush" onclick="openGame('Snake Rush')">
-<div class="gameImg g9">🐍</div>
-<div class="gameName">Snake Rush</div>
-<div class="gameMeta"><span>✨ خفيفة</span><span>⭐4.6</span></div>
+
+<div class="game"
+data-category="action"
+data-name="Breakout"
+onclick="openGame(
+'Breakout 💥',
+'https://saiuttejr.github.io/GameBox/breakout/'
+)">
+
+<div class="game-art bg9">💥</div>
+
+<div class="game-name">Breakout</div>
+
+<div class="game-info">
+<span>⚔️ أكشن</span>
+<span>مجاني</span>
 </div>
+
+</div>
+
 
 <!-- GAME 10 -->
-<div class="game" data-cat="building" data-name="Voxel World" onclick="openGame('Voxel World')">
-<div class="gameImg g10">🧱</div>
-<div class="gameName">Voxel World</div>
-<div class="gameMeta"><span>🧱 بناء</span><span>⭐4.7</span></div>
+
+<div class="game"
+data-category="casual"
+data-name="Whack a Mole"
+onclick="openGame(
+'Whack-a-Mole 🐹',
+'https://saiuttejr.github.io/GameBox/whack-a-mole/'
+)">
+
+<div class="game-art bg10">🐹</div>
+
+<div class="game-name">Whack-a-Mole</div>
+
+<div class="game-info">
+<span>✨ خفيفة</span>
+<span>مجاني</span>
 </div>
+
+</div>
+
 
 <!-- GAME 11 -->
-<div class="game" data-cat="building" data-name="Craft Island" onclick="openGame('Craft Island')">
-<div class="gameImg g11">🌳</div>
-<div class="gameName">Craft Island</div>
-<div class="gameMeta"><span>🧱 بناء</span><span>⭐4.7</span></div>
+
+<div class="game"
+data-category="puzzle"
+data-name="Wordle"
+onclick="openGame(
+'Wordle 🔤',
+'https://saiuttejr.github.io/GameBox/wordle/'
+)">
+
+<div class="game-art bg1">🔤</div>
+
+<div class="game-name">Wordle</div>
+
+<div class="game-info">
+<span>🧩 كلمات</span>
+<span>مجاني</span>
 </div>
+
+</div>
+
 
 <!-- GAME 12 -->
-<div class="game" data-cat="building" data-name="Block World" onclick="openGame('Block World')">
-<div class="gameImg g12">🏠</div>
-<div class="gameName">Block World</div>
-<div class="gameMeta"><span>🌎 عالم</span><span>⭐4.5</span></div>
+
+<div class="game"
+data-category="puzzle"
+data-name="Connect Four"
+onclick="openGame(
+'Connect Four 🔴🟡',
+'https://saiuttejr.github.io/GameBox/connect-four/'
+)">
+
+<div class="game-art bg2">🔴🟡</div>
+
+<div class="game-name">Connect Four</div>
+
+<div class="game-info">
+<span>🧩 ألغاز</span>
+<span>مجاني</span>
 </div>
+
+</div>
+
 
 <!-- GAME 13 -->
-<div class="game" data-cat="puzzle" data-name="Block Blaster" onclick="openGame('Block Blaster')">
-<div class="gameImg g13">🟦</div>
-<div class="gameName">Block Blaster</div>
-<div class="gameMeta"><span>🧩 ألغاز</span><span>⭐4.6</span></div>
+
+<div class="game"
+data-category="casual"
+data-name="Hangman"
+onclick="openGame(
+'Hangman 🔠',
+'https://saiuttejr.github.io/GameBox/hangman/'
+)">
+
+<div class="game-art bg3">🔠</div>
+
+<div class="game-name">Hangman</div>
+
+<div class="game-info">
+<span>✨ كلمات</span>
+<span>مجاني</span>
 </div>
+
+</div>
+
 
 <!-- GAME 14 -->
-<div class="game" data-cat="racing" data-name="سباق السرعة" onclick="openGame('سباق السرعة')">
-<div class="gameImg g14">🏎️</div>
-<div class="gameName">سباق السرعة</div>
-<div class="gameMeta"><span>🏁 سباقات</span><span>⭐4.9</span></div>
+
+<div class="game"
+data-category="action"
+data-name="Ragdoll Archers"
+onclick="openGame(
+'Ragdoll Archers 🏹',
+'https://ragdoll-archers.github.io/index.html'
+)">
+
+<div class="game-art bg4">🏹</div>
+
+<div class="game-name">Ragdoll Archers</div>
+
+<div class="game-info">
+<span>⚔️ أكشن</span>
+<span>مجاني</span>
 </div>
+
+</div>
+
 
 <!-- GAME 15 -->
-<div class="game" data-cat="casual" data-name="Tap Rush" onclick="openGame('Tap Rush')">
-<div class="gameImg g15">👆</div>
-<div class="gameName">Tap Rush</div>
-<div class="gameMeta"><span>⚡ سرعة</span><span>⭐4.5</span></div>
-</div>
 
-<!-- GAME 16 -->
-<div class="game" data-cat="puzzle" data-name="Memory Match" onclick="openGame('Memory Match')">
-<div class="gameImg g16">🧠</div>
-<div class="gameName">Memory Match</div>
-<div class="gameMeta"><span>🧩 ذاكرة</span><span>⭐4.7</span></div>
-</div>
+<div class="game"
+data-category="building"
+data-name="Project Cube"
+onclick="openGame(
+'Project Cube 🧱',
+'https://b-train04.github.io/Project-Cube/'
+)">
 
-<!-- GAME 17 -->
-<div class="game" data-cat="casual" data-name="Reaction Target" onclick="openGame('Reaction Target')">
-<div class="gameImg g17">🎯</div>
-<div class="gameName">Reaction Target</div>
-<div class="gameMeta"><span>⚡ سرعة</span><span>⭐4.8</span></div>
-</div>
+<div class="game-art bg5">🧱</div>
 
-<!-- GAME 18 -->
-<div class="game" data-cat="action" data-name="Click Fighter" onclick="openGame('Click Fighter')">
-<div class="gameImg g18">🥊</div>
-<div class="gameName">Click Fighter</div>
-<div class="gameMeta"><span>⚔️ أكشن</span><span>⭐4.4</span></div>
+<div class="game-name">Project Cube</div>
+
+<div class="game-info">
+<span>🧱 بناء</span>
+<span>مجاني</span>
 </div>
 
 </div>
+
+
+</div>
+
 </section>
 
-<div class="ad">مساحة إعلان Google AdSense</div>
+
+<div class="ad">
+مساحة إعلان Google AdSense
+</div>
+
+
+<!-- ================= TESTS ================= -->
 
 <section class="section" id="tests">
 
-<div class="sectionHead">
+<div class="section-title">
+
 <div class="title">
+
 🧠 اختبارات ممتعة
-<small>اختبار الشخصية والحب 10 أسئلة — الذكاء 12 سؤال</small>
+
+<span class="subtitle">
+شخصية 10 أسئلة • حب 10 أسئلة • ذكاء 12 سؤال
+</span>
+
 </div>
+
 </div>
+
 
 <div class="tests">
 
-<div class="test">
-<div class="testIcon">🧠</div>
-<h3>تحليل الشخصية</h3>
-<p>10 أسئلة لمعرفة نمط شخصيتك.</p>
-<button onclick="openQuiz('personality')">ابدأ الاختبار</button>
-</div>
+
+<!-- PERSONALITY -->
 
 <div class="test">
-<div class="testIcon">❤️</div>
-<h3>مقياس الحب</h3>
-<p>10 أسئلة مرحة عن أسلوبك في الحب.</p>
-<button onclick="openQuiz('love')">ابدأ الاختبار</button>
+
+<div class="test-icon">🧠</div>
+
+<h3>
+تحليل الشخصية
+</h3>
+
+<p>
+10 أسئلة ممتعة لمعرفة نمط شخصيتك.
+</p>
+
+<button onclick="startQuiz('personality')">
+ابدئي الاختبار
+</button>
+
 </div>
+
+
+<!-- LOVE -->
 
 <div class="test">
-<div class="testIcon">🔢</div>
-<h3>اختبار الذكاء IQ</h3>
-<p>12 سؤالًا منطقيًا لاختبار التفكير.</p>
-<button onclick="openQuiz('iq')">ابدأ الاختبار</button>
-</div>
+
+<div class="test-icon">❤️</div>
+
+<h3>
+مقياس الحب
+</h3>
+
+<p>
+10 أسئلة مرحة عن أسلوبك في الحب.
+</p>
+
+<button onclick="startQuiz('love')">
+ابدئي الاختبار
+</button>
 
 </div>
+
+
+<!-- IQ -->
+
+<div class="test">
+
+<div class="test-icon">🔢</div>
+
+<h3>
+اختبار الذكاء IQ
+</h3>
+
+<p>
+12 سؤالًا منطقيًا لاختبار التفكير.
+</p>
+
+<button onclick="startQuiz('iq')">
+ابدئي الاختبار
+</button>
+
+</div>
+
+
+</div>
+
 </section>
 
 </div>
+
 </main>
 
+
 <footer>
-© 2026 YOYO GAMES — ألعاب مجانية بدون تحميل 🎮
+© 2026 YOYO GAMES 🎮
+<br><br>
+ألعاب مجانية بدون تحميل
 </footer>
 
-<div class="mobileBar">
-<button class="active" onclick="goHome()"><span>⌂</span>الرئيسية</button>
-<button onclick="scrollGames()"><span>🎮</span>الألعاب</button>
-<button onclick="document.getElementById('build').scrollIntoView()"><span>🧱</span>البناء</button>
-<button onclick="document.getElementById('tests').scrollIntoView()"><span>🧠</span>الاختبارات</button>
+
+<!-- ================= MOBILE NAV ================= -->
+
+<div class="mobile-nav">
+
+<button class="selected"
+onclick="scrollToSection('home')">
+
+<span>⌂</span>
+الرئيسية
+
+</button>
+
+<button
+onclick="scrollToSection('games')">
+
+<span>🎮</span>
+الألعاب
+
+</button>
+
+<button
+onclick="scrollToSection('tests')">
+
+<span>🧠</span>
+الاختبارات
+
+</button>
+
 </div>
 
+
+<!-- ================= MODAL ================= -->
+
 <div class="modal" id="modal">
-<div class="modalBox">
-<div class="modalHead">
-<h2 id="modalTitle">اللعبة</h2>
-<button class="close" onclick="closeModal()">×</button>
+
+<div class="modal-box">
+
+<div class="modal-header">
+
+<b id="modal-title">
+🎮 اللعبة
+</b>
+
+<button class="close"
+onclick="closeModal()">
+×
+</button>
+
 </div>
-<div id="modalContent"></div>
+
+<div class="game-frame"
+id="game-frame">
 </div>
+
+<div class="game-link"
+id="game-link">
 </div>
+
+</div>
+
+</div>
+
 
 <script>
 
-const modal=document.getElementById("modal");
-const title=document.getElementById("modalTitle");
-const content=document.getElementById("modalContent");
+/* ================= BASIC ================= */
 
-function scrollGames(){
-document.getElementById("games").scrollIntoView({behavior:"smooth"});
-}
+function scrollToSection(id){
 
-function goHome(){
-window.scrollTo({top:0,behavior:"smooth"});
+  document.getElementById(id).scrollIntoView({
+    behavior:"smooth"
+  });
+
 }
 
 function focusSearch(){
-document.getElementById("search").focus();
+
+  document.getElementById("search").focus();
+
 }
+
+
+/* ================= SEARCH ================= */
 
 function searchGames(){
-let q=document.getElementById("search").value.toLowerCase();
 
-document.querySelectorAll(".game").forEach(game=>{
-let name=game.dataset.name.toLowerCase();
-game.style.display=name.includes(q)?"":"none";
-});
+  let text =
+    document.getElementById("search")
+    .value
+    .toLowerCase();
+
+  document
+  .querySelectorAll(".game")
+  .forEach(function(game){
+
+    let name =
+      game.dataset.name.toLowerCase();
+
+    game.style.display =
+      name.includes(text)
+      ? ""
+      : "none";
+
+  });
+
 }
 
-function filterGames(category,btn){
 
-document.querySelectorAll(".categories button")
-.forEach(b=>b.classList.remove("active"));
+/* ================= FILTER ================= */
 
-btn.classList.add("active");
+function filterGames(category,button){
 
-document.querySelectorAll(".game").forEach(game=>{
-game.style.display=
-category==="all"||game.dataset.cat===category
-?"":"none";
-});
+  document
+  .querySelectorAll(".categories button")
+  .forEach(function(btn){
+
+    btn.classList.remove("active");
+
+  });
+
+  button.classList.add("active");
+
+  document
+  .querySelectorAll(".game")
+  .forEach(function(game){
+
+    if(category === "all"){
+
+      game.style.display = "";
+
+    }else{
+
+      game.style.display =
+        game.dataset.category === category
+        ? ""
+        : "none";
+
+    }
+
+  });
+
 }
 
-function openModal(t,html){
-title.textContent=t;
-content.innerHTML=html;
-modal.classList.add("show");
+
+/* ================= GAME WINDOW ================= */
+
+const modal =
+document.getElementById("modal");
+
+const frame =
+document.getElementById("game-frame");
+
+const modalTitle =
+document.getElementById("modal-title");
+
+const gameLink =
+document.getElementById("game-link");
+
+
+function openGame(name,url){
+
+  modalTitle.textContent =
+    "🎮 " + name;
+
+  frame.innerHTML =
+    '<iframe src="' +
+    url +
+    '" allowfullscreen></iframe>';
+
+  gameLink.innerHTML =
+    'إذا لم تعمل اللعبة داخل النافذة، ' +
+    '<a href="' +
+    url +
+    '" target="_blank" rel="noopener">' +
+    'اضغطي هنا لفتح اللعبة' +
+    '</a>';
+
+  modal.classList.add("show");
+
 }
+
 
 function closeModal(){
-clearInterval(window.gameTimer);
-modal.classList.remove("show");
-}
 
-modal.onclick=e=>{
-if(e.target===modal)closeModal();
-};
+  modal.classList.remove("show");
 
-/* الألعاب */
-
-function openGame(name){
-
-if(name==="XO")return xoGame();
-if(name==="Memory Match")return memoryGame();
-if(name==="Reaction Target")return reactionGame();
-if(name==="Tap Rush")return tapGame();
-
-if(["جزيرة المكعبات","Voxel World","Craft Island","Block World"].includes(name))
-return buildGame(name);
-
-let icons={
-"Ragdoll Archers":"🏹",
-"Evo Warriors":"🛡️",
-"Slice Master":"🔪",
-"Pixel Blast":"💥",
-"Crazy Chameleon":"🦎",
-"Bad Cat":"🐈",
-"Click Fighter":"🥊",
-"سباق السرعة":"🏎️"
-};
-
-openModal(name,`
-<div class="gameScreen">
-<div>
-<div style="font-size:80px">${icons[name]||"🎮"}</div>
-<h2>${name}</h2>
-<p style="color:#999;line-height:2">
-اضغطي على الزر للعب التجربة.
-</p>
-<button class="primary" onclick="demoGame('${name}')">
-▶ ابدأ اللعب
-</button>
-</div>
-</div>
-`);
-}
-
-function demoGame(name){
-
-let score=0;
-
-openModal(name,`
-<div class="gameScreen">
-<div>
-<div style="font-size:75px">🎮</div>
-<h2>اضغطي بأسرع ما يمكنك!</h2>
-<p>النقاط: <b id="demoScore">0</b></p>
-
-<button class="primary"
-style="width:150px;height:150px;border-radius:50%;font-size:20px"
-onclick="
-score++;
-document.getElementById('demoScore').textContent=score
-">
-اضغط!
-</button>
-
-</div>
-</div>
-`);
-}
-
-/* TAP RUSH */
-
-function tapGame(){
-
-let score=0;
-let time=10;
-
-openModal("⚡ Tap Rush",`
-<div class="gameScreen">
-<div>
-<h2>اضغطي بأسرع ما تستطيعين!</h2>
-<p>النقاط: <b id="tapScore">0</b></p>
-<p>الوقت: <b id="tapTime">10</b></p>
-
-<button class="primary"
-style="width:150px;height:150px;border-radius:50%"
-onclick="
-score++;
-document.getElementById('tapScore').textContent=score
-">
-اضغط!
-</button>
-
-</div>
-</div>
-`);
-
-window.gameTimer=setInterval(()=>{
-
-time--;
-
-let el=document.getElementById("tapTime");
-
-if(el)el.textContent=time;
-
-if(time<=0){
-clearInterval(window.gameTimer);
-alert("انتهى الوقت! نتيجتك: "+score);
-}
-
-},1000);
+  frame.innerHTML = "";
 
 }
 
-/* XO */
 
-let xo=Array(9).fill("");
+modal.addEventListener(
+  "click",
+  function(event){
 
-function xoGame(){
+    if(event.target === modal){
 
-xo=Array(9).fill("");
+      closeModal();
 
-openModal("❌⭕ XO",`
-<div class="gameScreen">
-<div>
-<h3>دورك ❌</h3>
-<div class="board" id="board"></div>
-</div>
-</div>
-`);
+    }
 
-for(let i=0;i<9;i++){
-
-let b=document.createElement("button");
-b.className="cell";
-
-b.onclick=()=>{
-playXO(i,b);
-};
-
-document.getElementById("board").appendChild(b);
-}
-
-}
-
-function winner(p){
-
-return[
-[0,1,2],[3,4,5],[6,7,8],
-[0,3,6],[1,4,7],[2,5,8],
-[0,4,8],[2,4,6]
-].some(a=>a.every(i=>xo[i]===p));
-
-}
-
-function playXO(i,b){
-
-if(xo[i])return;
-
-xo[i]="X";
-b.textContent="❌";
-
-if(winner("X")){
-setTimeout(()=>{
-alert("فزتِ! 🎉");
-closeModal();
-},100);
-return;
-}
-
-if(xo.every(Boolean)){
-alert("تعادل!");
-return;
-}
-
-let free=xo
-.map((v,i)=>v?null:i)
-.filter(v=>v!==null);
-
-let move=free[Math.floor(Math.random()*free.length)];
-
-xo[move]="O";
-document.querySelectorAll(".cell")[move].textContent="⭕";
-
-if(winner("O")){
-setTimeout(()=>{
-alert("فاز الكمبيوتر 😄");
-closeModal();
-},100);
-}
-
-}
-
-/* MEMORY */
-
-function memoryGame(){
-
-let icons=["🍎","🚀","🐱","⭐","🍕","🎮","🌈","⚽"];
-let cards=[...icons,...icons].sort(()=>Math.random()-.5);
-
-openModal("🧠 Memory Match",`
-<div class="gameScreen">
-<div>
-<h3>طابقي الأزواج</h3>
-<div class="memory" id="memory"></div>
-</div>
-</div>
-`);
-
-let first=null;
-let lock=false;
-let matches=0;
-
-cards.forEach(icon=>{
-
-let b=document.createElement("button");
-b.className="mem";
-b.textContent="?";
-
-b.onclick=()=>{
-
-if(lock||b.done||b===first)return;
-
-b.textContent=icon;
-
-if(!first){
-first=b;
-return;
-}
-
-if(first.textContent===b.textContent){
-
-first.done=true;
-b.done=true;
-first=null;
-matches++;
-
-if(matches===icons.length){
-setTimeout(()=>alert("أحسنتِ! 🎉"),200);
-}
-
-}else{
-
-lock=true;
-
-setTimeout(()=>{
-first.textContent="?";
-b.textContent="?";
-first=null;
-lock=false;
-},600);
-
-}
-
-};
-
-document.getElementById("memory").appendChild(b);
-
-});
-
-}
-
-/* TARGET */
-
-function reactionGame(){
-
-openModal("🎯 Reaction Target",`
-<div class="gameScreen">
-<div style="width:100%">
-<p id="reactionText">اضغطي ابدأ وانتظري الهدف.</p>
-
-<button class="primary" onclick="startReaction()">
-ابدأ
-</button>
-
-<div class="targetArea" id="targetArea">
-<button class="target"
-id="target"
-onclick="hitTarget()">
-</button>
-</div>
-
-</div>
-</div>
-`);
-
-}
-
-function startReaction(){
-
-let target=document.getElementById("target");
-let area=document.getElementById("targetArea");
-
-target.style.display="none";
-
-setTimeout(()=>{
-
-target.style.left=
-Math.random()*(area.clientWidth-50)+"px";
-
-target.style.top=
-Math.random()*(area.clientHeight-50)+"px";
-
-target.style.display="block";
-
-window.reactionStart=performance.now();
-
-},700+Math.random()*1500);
-
-}
-
-function hitTarget(){
-
-if(!window.reactionStart)return;
-
-let ms=Math.round(
-performance.now()-window.reactionStart
+  }
 );
 
-document.getElementById("reactionText").textContent=
-"سرعتك "+ms+" مللي ثانية! 🔥";
 
-document.getElementById("target").style.display="none";
+/* ================= QUIZZES ================= */
 
-window.reactionStart=null;
-}
-
-/* BUILDING GAME */
-
-function buildGame(name){
-
-openModal("🧱 "+name,`
-<div class="gameScreen">
-<div>
-<h3>ابني عالمك 🧱</h3>
-
-<p style="color:#999">
-اضغطي على المربعات لتغيير البلوك.
-</p>
-
-<div class="world" id="world"></div>
-
-<p style="color:#999">
-🟩 عشب — 🟫 تراب — 🟨 رمل
-</p>
-
-</div>
-</div>
-`);
-
-for(let i=0;i<70;i++){
-
-let b=document.createElement("button");
-b.className="block";
-b.dataset.type=0;
-
-b.onclick=()=>{
-
-b.dataset.type=
-(+b.dataset.type+1)%3;
-
-let colors=[
-"#3b7a3b",
-"#79553b",
-"#c5a646"
-];
-
-b.style.background=
-colors[b.dataset.type];
-
-};
-
-document.getElementById("world").appendChild(b);
-
-}
-
-}
-
-/* الاختبارات */
-
-const quizzes={
+const quizzes = {
 
 personality:{
+
 title:"🧠 تحليل الشخصية",
+
 questions:[
-"عندما تدخلين مكانًا جديدًا؟",
-"كيف تتصرفين عند مشكلة؟",
+
+"عندما تدخلين مكانًا جديدًا، ماذا تفعلين؟",
+
+"كيف تتعاملين مع مشكلة صعبة؟",
+
 "ماذا تفضلين في وقت الفراغ؟",
+
 "هل تحبين العمل ضمن فريق؟",
+
 "كيف تتخذين قراراتك؟",
+
 "كيف تتعاملين مع التغيير؟",
-"ما الذي يصفك أكثر؟",
-"عند الاختلاف مع شخص؟",
-"ما نوع الرحلات التي تفضلينها؟",
-"ما أهم شيء بالنسبة لك؟"
+
+"ما الوصف الأقرب لك؟",
+
+"عند الاختلاف مع شخص، ماذا تفعلين؟",
+
+"ما نوع الرحلات التي تحبينها؟",
+
+"ما الشيء الأهم بالنسبة لك؟"
+
 ],
+
 answers:[
-["أستكشف","أراقب","أتعرف على الناس","أبحث عن المتعة"],
-["أحلها فورًا","أفكر بهدوء","أطلب المساعدة","أجرب حلولًا"],
+
+["أستكشف المكان","أراقب أولًا","أتحدث مع الناس","أبحث عن المتعة"],
+
+["أحلها فورًا","أفكر بهدوء","أطلب المساعدة","أجرب أكثر من حل"],
+
 ["الألعاب","القراءة","الخروج","الأفلام"],
-["دائمًا","غالبًا","أحيانًا","نادراً"],
+
+["دائمًا","غالبًا","أحيانًا","نادرًا"],
+
 ["بسرعة","بعد التفكير","أسأل شخصًا","حسب الموقف"],
+
 ["أحب التغيير","أحتاج وقتًا","أتحمس","أفضل الروتين"],
+
 ["جريئة","هادئة","اجتماعية","مبدعة"],
-["أناقش","أبتعد","أقنع","حل وسط"],
+
+["أناقش","أبتعد قليلًا","أحاول الإقناع","أبحث عن حل وسط"],
+
 ["مغامرات","استرخاء","مدن","طبيعة"],
+
 ["العائلة","النجاح","الحرية","الحب"]
+
 ]
+
 },
+
 
 love:{
+
 title:"❤️ مقياس الحب",
+
 questions:[
+
 "هل تتذكرين التفاصيل الصغيرة؟",
-"الرسائل أم المكالمات؟",
+
+"ماذا تفضلين: الرسائل أم المكالمات؟",
+
 "هل تغارين بسهولة؟",
+
 "هل تحبين المفاجآت؟",
+
 "هل تسامحين بسرعة؟",
-"هل تهتمين بالتفاصيل؟",
+
+"هل تهتمين بالتفاصيل في العلاقة؟",
+
 "هل تعبرين عن مشاعرك؟",
+
 "هل تفضلين العلاقات الطويلة؟",
+
 "هل تثقين بسرعة؟",
+
 "ما أهم شيء في العلاقة؟"
+
 ],
+
 answers:[
-["دائمًا","غالبًا","أحيانًا","نادراً"],
+
+["دائمًا","غالبًا","أحيانًا","نادرًا"],
+
 ["الرسائل","المكالمات","كلاهما","حسب الشخص"],
-["نعم","قليلًا","أحيانًا","أبدًا"],
+
+["نعم جدًا","قليلًا","أحيانًا","أبدًا"],
+
 ["نعم جدًا","أحيانًا","قليلًا","لا"],
+
 ["بسرعة","بعد وقت","حسب الخطأ","صعب"],
-["كثيرًا","غالبًا","أحيانًا","نادراً"],
+
+["كثيرًا","غالبًا","أحيانًا","نادرًا"],
+
 ["نعم","غالبًا","أحيانًا","صعب"],
+
 ["نعم","غالبًا","لا أعرف","لا"],
-["نعم","بعد وقت","بحذر","نادراً"],
+
+["نعم","بعد وقت","بحذر","نادرًا"],
+
 ["الثقة","الاهتمام","الاحترام","كلها"]
+
 ]
+
 },
 
+
 iq:{
+
 title:"🔢 اختبار الذكاء IQ",
+
 questions:[
+
 "2، 4، 8، 16، ؟",
+
 "5، 10، 20، 40، ؟",
+
 "6 + 6 = ؟",
-"أي كلمة مختلفة؟",
+
+"أي كلمة مختلفة عن البقية؟",
+
 "ما الزاوية بين عقربي الساعة عند الثالثة؟",
+
 "أيهما الأصغر؟",
+
 "1، 3، 5، 7، ؟",
+
 "9 × 9 = ؟",
+
 "لديك 10 تفاحات وأخذت 3، كم بقي؟",
+
 "100، 90، 80، ؟",
+
 "شكل له 3 أضلاع؟",
+
 "ما نصف 50؟"
+
 ],
+
 answers:[
+
 ["32","24","20","30"],
+
 ["80","60","100","70"],
+
 ["12","9","18","10"],
+
 ["سيارة","تفاح","موز","برتقال"],
+
 ["90°","30°","180°","45°"],
+
 ["0.05","0.5","5","0.005"],
+
 ["9","8","10","11"],
+
 ["81","72","90","99"],
+
 ["7","3","13","10"],
+
 ["70","60","75","65"],
+
 ["مثلث","مربع","دائرة","مستطيل"],
+
 ["25","20","30","10"]
+
 ],
-correct:[0,0,0,0,0,0,0,0,0,0,0,0]
+
+correct:[
+
+0,0,0,0,0,0,
+0,0,0,0,0,0
+
+]
+
 }
 
 };
 
+
 let currentQuiz;
-let questionIndex;
-let quizScore;
+let currentQuestion=0;
+let score=0;
 
-function openQuiz(type){
 
-currentQuiz=quizzes[type];
-questionIndex=0;
-quizScore=0;
+/* ================= START QUIZ ================= */
 
-showQuestion();
+function startQuiz(type){
+
+  currentQuiz =
+    quizzes[type];
+
+  currentQuestion = 0;
+
+  score = 0;
+
+  showQuestion();
 
 }
+
+
+/* ================= SHOW QUESTION ================= */
 
 function showQuestion(){
 
-let q=currentQuiz.questions[questionIndex];
-let answers=currentQuiz.answers[questionIndex];
+  modalTitle.textContent =
+    currentQuiz.title;
 
-openModal(currentQuiz.title,`
+  let total =
+    currentQuiz.questions.length;
 
-<div>
+  let progress =
+    ((currentQuestion + 1) / total) * 100;
 
-<div class="progress">
-<div style="width:${((questionIndex+1)/currentQuiz.questions.length)*100}%"></div>
-</div>
+  frame.innerHTML = `
 
-<p style="color:#777">
-السؤال ${questionIndex+1} من ${currentQuiz.questions.length}
-</p>
+  <div class="quiz">
 
-<div class="quizQuestion">
-${q}
-</div>
+    <div class="progress">
 
-<div class="answers">
+      <div
+      class="progress-bar"
+      style="width:${progress}%">
+      </div>
 
-${answers.map((answer,i)=>`
+    </div>
 
-<button class="answer" onclick="answerQuiz(${i})">
-${answer}
-</button>
+    <div class="question-number">
+      السؤال ${currentQuestion + 1}
+      من ${total}
+    </div>
 
-`).join("")}
+    <div class="question">
+      ${currentQuiz.questions[currentQuestion]}
+    </div>
 
-</div>
+    <div class="answers">
 
-</div>
+      ${currentQuiz.answers[currentQuestion]
+      .map(function(answer,index){
 
-`);
+        return `
+        <button
+        class="answer"
+        onclick="chooseAnswer(${index})">
+        ${answer}
+        </button>
+        `;
 
-}
+      }).join("")}
 
-function answerQuiz(answer){
+    </div>
 
-if(currentQuiz===quizzes.iq){
+  </div>
 
-if(answer===currentQuiz.correct[questionIndex])
-quizScore++;
+  `;
 
-}else{
+  gameLink.innerHTML = "";
 
-if(answer===0)
-quizScore+=2;
-
-if(answer===1)
-quizScore++;
-
-}
-
-questionIndex++;
-
-if(questionIndex>=currentQuiz.questions.length){
-
-showResult();
-
-}else{
-
-showQuestion();
+  modal.classList.add("show");
 
 }
 
+
+/* ================= ANSWER ================= */
+
+function chooseAnswer(index){
+
+  if(currentQuiz === quizzes.iq){
+
+    if(
+      index ===
+      currentQuiz.correct[currentQuestion]
+    ){
+
+      score++;
+
+    }
+
+  }else{
+
+    if(index === 0){
+
+      score += 2;
+
+    }else if(index === 1){
+
+      score++;
+
+    }
+
+  }
+
+  currentQuestion++;
+
+  if(
+    currentQuestion >=
+    currentQuiz.questions.length
+  ){
+
+    showResult();
+
+  }else{
+
+    showQuestion();
+
+  }
+
 }
+
+
+/* ================= RESULT ================= */
 
 function showResult(){
 
-let message="";
+  let message = "";
 
-if(currentQuiz===quizzes.iq){
+  if(currentQuiz === quizzes.iq){
 
-if(quizScore>=10)
-message="ممتاز جدًا! تفكيرك المنطقي رائع 🧠🔥";
-else if(quizScore>=7)
-message="نتيجة جيدة جدًا! 👏";
-else
-message="حاولي مرة أخرى وطوري مهاراتك 💪";
+    if(score >= 10){
 
-}else if(currentQuiz===quizzes.personality){
+      message =
+        "ممتاز جدًا! تفكيرك المنطقي رائع 🧠🔥";
 
-if(quizScore>=15)
-message="شخصية قوية ومبادرة ✨";
-else if(quizScore>=8)
-message="شخصية متوازنة 🌟";
-else
-message="شخصية هادئة ومميزة 💜";
+    }else if(score >= 7){
 
-}else{
+      message =
+        "نتيجة جيدة جدًا! 👏";
 
-if(quizScore>=15)
-message="قلبك مليء بالمشاعر ❤️";
-else if(quizScore>=8)
-message="توازن جميل في الحب 💕";
-else
-message="أنت حذرة في مشاعرك 💜";
+    }else{
 
-}
+      message =
+        "نتيجة جميلة، جربي الاختبار مرة ثانية 💪";
 
-openModal(currentQuiz.title,`
+    }
 
-<div class="gameScreen">
+  }else if(
+    currentQuiz === quizzes.personality
+  ){
 
-<div>
+    if(score >= 15){
 
-<div style="font-size:60px">🎉</div>
+      message =
+        "شخصيتك قوية ومبادرة ✨";
 
-<h2>انتهى الاختبار!</h2>
+    }else if(score >= 8){
 
-<div class="score">
-${quizScore}
-</div>
+      message =
+        "شخصيتك متوازنة ومميزة 🌟";
 
-<p style="color:#aaa">
-${message}
-</p>
+    }else{
 
-<button class="primary" onclick="closeModal()">
-العودة
-</button>
+      message =
+        "شخصيتك هادئة ومميزة 💜";
 
-</div>
+    }
 
-</div>
+  }else{
 
-`);
+    if(score >= 15){
+
+      message =
+        "قلبك مليء بالمشاعر ❤️";
+
+    }else if(score >= 8){
+
+      message =
+        "لديك توازن جميل في الحب 💕";
+
+    }else{
+
+      message =
+        "أنت حذرة في مشاعرك 💜";
+
+    }
+
+  }
+
+
+  frame.innerHTML = `
+
+  <div class="result">
+
+    <div class="result-icon">
+      🎉
+    </div>
+
+    <h2>
+      انتهى الاختبار!
+    </h2>
+
+    <div class="result-score">
+      ${score}
+    </div>
+
+    <p style="color:#aaa">
+      ${message}
+    </p>
+
+    <br>
+
+    <button
+    class="primary-button"
+    onclick="closeModal()">
+      العودة للموقع
+    </button>
+
+  </div>
+
+  `;
+
+  gameLink.innerHTML = "";
 
 }
 
